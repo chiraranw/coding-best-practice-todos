@@ -1,0 +1,31 @@
+1. Logging
+2. Remote Debugging
+3. Projectors Envers
+4. Git bisect
+
+
+
+
+
+@Entity
+@Data
+@Audited
+public class CronJob extends  BaseEntity {
+    @Column(name = "job_name", nullable = false,unique = true)
+    private String jobName;
+    @Column(name = "cron_expression", nullable = false)
+    private String cronExpression;
+}
+
+
+@Bean
+public String getConfigRefreshValue() {
+   return configRepository.findOne(Constants.CONFIG_KEY_REFRESH_RATE).getConfigValue();
+}
+.
+.
+.
+@Scheduled(fixedRateString = "#{@getConfigRefreshValue}")
+public void loadConfigurations() {
+...
+}
