@@ -1,5 +1,7 @@
-1. Logging
+1. Clean Logging - half done with logback
 2. Remote Debugging
-3. Projectors Envers
+3. Projectors Envers - done
 4. Git bisect
 5. Pagination
+6. Handling exceptions with controller advice
+7. Bean validation with JSR 303
