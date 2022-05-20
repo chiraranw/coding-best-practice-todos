@@ -5,3 +5,5 @@
 5. Pagination
 6. Handling exceptions with controller advice
 7. Bean validation with JSR 303
+8. Security
+9. Caching
