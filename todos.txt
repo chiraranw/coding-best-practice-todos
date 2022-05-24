@@ -7,3 +7,4 @@
 7. Bean validation with JSR 303
 8. Security
 9. Caching
+Spring Message Source
